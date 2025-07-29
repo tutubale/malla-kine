@@ -1,0 +1,48 @@
+body {
+  font-family: sans-serif;
+  background-color: #f4d8d8;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #4a2c2a;
+}
+
+.malla {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.semestre {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 200px;
+  box-shadow: 0 0 5px #ccc;
+}
+
+.curso {
+  background-color: #fdf5d4; /* No disponible */
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.curso.cursando {
+  background-color: #a0d8ef;
+} /* Celeste */
+.curso.aprobado {
+  background-color: #d8b4e2;
+} /* Lila */
+.curso.reprobado {
+  background-color: #f7c1c1;
+} /* Rosado */
