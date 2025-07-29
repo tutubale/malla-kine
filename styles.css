@@ -12,37 +12,54 @@ h1 {
 
 .malla {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.anio {
+  text-align: center;
+}
+
+.semestres {
+  display: flex;
   justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .semestre {
   background-color: white;
-  padding: 10px;
-  border-radius: 10px;
-  min-width: 200px;
-  box-shadow: 0 0 5px #ccc;
+  padding: 15px;
+  border-radius: 12px;
+  min-width: 220px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.semestre h3 {
+  margin-top: 0;
+  color: #4a2c2a;
 }
 
 .curso {
   background-color: #fdf5d4; /* No disponible */
   margin: 10px 0;
   padding: 10px;
-  border-radius: 6px;
+  border-radius: 8px;
   text-align: center;
+  font-weight: bold;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: background-color 0.3s;
   user-select: none;
-  touch-action: manipulation;
 }
 
 .curso.cursando {
   background-color: #a0d8ef;
-} /* Celeste */
+}
+
 .curso.aprobado {
   background-color: #d8b4e2;
-} /* Lila */
+}
+
 .curso.reprobado {
   background-color: #f7c1c1;
-} /* Rosado */
+}
