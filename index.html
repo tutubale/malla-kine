@@ -1,157 +1,65 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Malla Interactiva Kinesiología</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <h1>Malla Interactiva Kinesiología</h1>
-    <div class="malla">
-      <!-- Año 1 -->
-      <div class="semestre">
-        <h2>1° Semestre</h2>
-        <div class="curso" data-id="BIO1123">BIO1123<br />Biología General</div>
-        <div class="curso" data-id="FIS1142">FIS1142<br />Física</div>
-        <div class="curso" data-id="BIO128">BIO128<br />Anatomía Humana 1</div>
-        <div class="curso" data-id="BQA149">BQA149<br />Bioquímica</div>
-        <div class="curso" data-id="KIN140">
-          KIN140<br />Intro a la Kinesiología
-        </div>
-        <div class="curso" data-id="ICR010">
-          ICR010<br />Antropología Cristiana
-        </div>
-      </div>
+body {
+  font-family: sans-serif;
+  background-color: #f4d8d8;
+  margin: 0;
+  padding: 20px;
+}
 
-      <div class="semestre">
-        <h2>2° Semestre</h2>
-        <div class="curso" data-id="BIO131" data-prerreq="BIO1123">
-          BIO131<br />Biología Celular
-        </div>
-        <div class="curso" data-id="FIS214" data-prerreq="FIS1142">
-          FIS214<br />Biofísica
-        </div>
-        <div class="curso" data-id="BIO129" data-prerreq="BIO128">
-          BIO129<br />Anatomía Humana 2
-        </div>
-        <div class="curso" data-id="KIN150">
-          KIN150<br />Promoción y Autocuidado
-        </div>
-        <div class="curso" data-id="ING9001">Inglés 1</div>
-      </div>
+h1 {
+  text-align: center;
+  color: #4a2c2a;
+}
 
-      <!-- Año 2 -->
-      <div class="semestre">
-        <h2>3° Semestre</h2>
-        <div class="curso" data-id="KIN220">
-          KIN220<br />Traumatología Adultos
-        </div>
-        <div class="curso" data-id="KIN236">
-          KIN236<br />Fisiología Sistemas
-        </div>
-        <div class="curso" data-id="KIN242">KIN242<br />Biomecánica 1</div>
-        <div class="curso" data-id="KIN248">KIN248<br />Neurofisiología</div>
-        <div class="curso" data-id="KIN245">KIN245<br />Salud Pública</div>
-        <div class="curso" data-id="ING9002">Inglés 2</div>
-      </div>
+.malla {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
 
-      <div class="semestre">
-        <h2>4° Semestre</h2>
-        <div class="curso" data-id="KIN285">
-          KIN285<br />Traumatología Infanto-Juvenil
-        </div>
-        <div class="curso" data-id="KIN262">KIN262<br />Fisiopatología 1</div>
-        <div class="curso" data-id="KIN252">KIN252<br />Biomecánica 2</div>
-        <div class="curso" data-id="KIN247">KIN247<br />Neuropsicología</div>
-        <div class="curso" data-id="KIN346">
-          KIN346<br />Enfermería y Primeros Aux.
-        </div>
-        <div class="curso" data-id="ING9003">Inglés 3</div>
-      </div>
+.anio {
+  text-align: center;
+}
 
-      <!-- Año 3 -->
-      <div class="semestre">
-        <h2>5° Semestre</h2>
-        <div class="curso" data-id="KIN325">
-          KIN325<br />Metodología Evaluativa 1
-        </div>
-        <div class="curso" data-id="KIN332">KIN332<br />Fisiopatología 2</div>
-        <div class="curso" data-id="KIN348">
-          KIN348<br />Fisiología Ejercicio
-        </div>
-        <div class="curso" data-id="KIN341">KIN341<br />Neurología Clínica</div>
-        <div class="curso" data-id="KIN335">
-          KIN335<br />Farmacología General
-        </div>
-        <div class="curso" data-id="EST209">EST209<br />Bioestadística</div>
-      </div>
+.semestres {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
 
-      <div class="semestre">
-        <h2>6° Semestre</h2>
-        <div class="curso" data-id="KIN425">
-          KIN425<br />Metodología Evaluativa 2
-        </div>
-        <div class="curso" data-id="KIN432">KIN432<br />Fisioterapia</div>
-        <div class="curso" data-id="KIN439">
-          KIN439<br />Rehab. Músculo-Esquelética 1
-        </div>
-        <div class="curso" data-id="KIN450">
-          KIN450<br />Neuro-Rehab. Infantil
-        </div>
-        <div class="curso" data-id="KIN456">
-          KIN456<br />Kinesiterapia Cardio 1
-        </div>
-        <div class="curso" data-id="ING9004">Inglés 4</div>
-      </div>
+.semestre {
+  background-color: white;
+  padding: 15px;
+  border-radius: 12px;
+  min-width: 220px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-      <!-- Año 4 -->
-      <div class="semestre">
-        <h2>7° Semestre</h2>
-        <div class="curso" data-id="KIN474">
-          KIN474<br />Integración Clínica 1
-        </div>
-        <div class="curso" data-id="KIN479">
-          KIN479<br />Rehab. Músculo-Esquelética 2
-        </div>
-        <div class="curso" data-id="KIN482">
-          KIN482<br />Neuro-Rehab. Adulto
-        </div>
-        <div class="curso" data-id="KIN486">
-          KIN486<br />Kinesiterapia Cardio 2
-        </div>
-        <div class="curso" data-id="KIN489">
-          KIN489<br />Metodología Investigación
-        </div>
-      </div>
+.semestre h3 {
+  margin-top: 0;
+  color: #4a2c2a;
+}
 
-      <div class="semestre">
-        <h2>8° Semestre</h2>
-        <div class="curso" data-id="KIN532">
-          KIN532<br />Integración Clínica 2
-        </div>
-        <div class="curso" data-id="KINXXX1">Optativo 1</div>
-        <div class="curso" data-id="KINXXX2">Optativo 2</div>
-        <div class="curso" data-id="KIN545">KIN545<br />Gestión en Salud</div>
-        <div class="curso" data-id="KIN590">KIN590<br />Seminario</div>
-      </div>
+.curso {
+  background-color: #fdf5d4; /* No disponible */
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  user-select: none;
+}
 
-      <!-- Año 5 -->
-      <div class="semestre">
-        <h2>9° Semestre</h2>
-        <div class="curso" data-id="KIN600">
-          KIN600<br />Práctica Profesional 1
-        </div>
-      </div>
+.curso.cursando {
+  background-color: #a0d8ef;
+}
 
-      <div class="semestre">
-        <h2>10° Semestre</h2>
-        <div class="curso" data-id="KIN650">
-          KIN650<br />Práctica Profesional 2
-        </div>
-        <div class="curso" data-id="ICR020">ICR020<br />Moral Cristiana</div>
-      </div>
-    </div>
-    <script src="script.js"></script>
-  </body>
-</html>
+.curso.aprobado {
+  background-color: #d8b4e2;
+}
+
+.curso.reprobado {
+  background-color: #f7c1c1;
+}
